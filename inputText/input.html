@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="inputtxt">
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Input Application</title>
+<script src="angular.js"></script>
+<script src="inputApp.js"></script>
+</head>
+
+<body>
+	<h1>Input Application</h1>
+	<div ng-controller="input">
+		Enter text:<input ng-model="userName" type="text"></input>
+		<p>The Text entered is :{{userName}}</p>
+	</div>
+</body>
+</html>

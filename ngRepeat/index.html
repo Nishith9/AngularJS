@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="DirApps">
+<head>
+<meta charset="ISO-8859-1">
+<title>ng- Repeat App</title>
+<script src='angular.js'></script>
+<script src='app.js'></script>
+
+</head>
+
+<body>
+	<h1>ng Repeat</h1>
+	<div ng-controller="dirctrl as ctrl">
+		<div ng-repeat="i in ctrl.myList">
+		
+		<!-- $index defines scope for each element in this ng-repeat loop
+		Other scope options are $first,$middle,$last,$even,$odd --> 
+			<p>Element{{$index}}</p>
+			<p>Name:{{i.name}}</p>
+			<p>Age:{{i.age}}</p>
+			<hr />
+		</div>
+	</div>
+</body>
+</html>

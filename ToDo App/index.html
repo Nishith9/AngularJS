@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>To Do Application</title>
+<script src = 'angular.js'></script>
+<script src = 'app.js'></script>
+</head>
+<body>
+ <h1>To Do </h1>
+ <div ng-controller="todoCtrl as ctrl">
+ 	<div>
+			<p>Add a task:</p>
+			<input type="text" ng-model="ctrl.newTodo">
+			<button ng-click="ctrl.addNewTodo()">Add</button>
+	</div>
+ 	<div>
+			<p>Your To Do list:</p>
+			<button ng-hide="ctrl.editMode" ng-click="ctrl.triggerEditMode()">Edit</button>
+			<button ng-show="ctrl.editMode" ng-click="ctrl.triggerEditMode()">Done</button>
+			<ol>
+			<!-- track by $index allows to add duplicate values in the todo list -->
+				<li ng-repeat="todo in ctrl.todos track by $index">
+				<span ng-hide="ctrl.editMode"ng-bind="todo"></span>
+				<input ng-model="todo" ng-show="ctrl.editMode" type = "text"></input>
+				<button ng-hide="ctrl.editMode" ng-click="ctrl.delete($index)">Delete</button>
+				</li>
+			</ol>
+	</div>
+ </div>
+</body>
+</html>

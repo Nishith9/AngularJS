@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="ContactApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>Contact Application</title>
+<script src = 'angular.js'></script>
+<script src = 'app.js'></script>
+</head>
+<body>
+ <h1>Contact Application </h1>
+ <div ng-controller="ContactCtrl as ctrl">
+ 	<div ng-repeat="contact in ctrl.contacts">
+ 	<span>{{contact.name.first + " " + contact.name.last}}</span>
+ 	</div>
+ </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="DirApps">
+<head>
+<meta charset="ISO-8859-1">
+<title>Directives Application</title>
+<script src = 'angular.js'></script>
+<script src = 'app.js'></script>
+</head>
+
+<body>
+ <h1>ng Directives</h1>
+ <div ng-controller="dirctrl">
+ 	<input type = "checkbox" ng-model = "ctrl.checked"></input>
+ 	<!-- ng- if,show,hide -->
+ 	<p ng-if = "ctrl.checked">Some Content</p>
+ </div>
+</body>
+</html>
